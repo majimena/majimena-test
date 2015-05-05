@@ -1,0 +1,20 @@
+{
+    "majimenatestApp": {
+        "project" : {
+            "home": {
+                "title": "Projects",
+                "createLabel": "Créer un nouveau Project",
+                "createOrEditLabel": "Créer ou éditer un Project"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Project {{ id }} ?"
+            },
+            "detail": {
+                "title": "Project"
+            },
+            "name": "Name",
+            "description": "Description"
+        }
+    }
+}
+

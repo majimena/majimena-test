@@ -6,6 +6,7 @@
             "home": "Home",
             "entities": {
                 "main": "Entities",
+                "project": "Project",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
