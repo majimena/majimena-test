@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "majimenatest",
+    "packageName": "org.majimena.test",
+    "packageFolder": "org/majimena/test",
+    "authenticationType": "oauth2",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "084c7e3012977a4347833b45d3a70abc55333565"
+  }
+}
