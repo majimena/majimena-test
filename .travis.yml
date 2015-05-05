@@ -1,0 +1,6 @@
+language: java
+jdk:
+  - oraclejdk8
+
+notifications:
+  slack: majimenatest:L3BPfAVyCiFEXwQ6Q2qMI7c1
