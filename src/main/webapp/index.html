@@ -11,18 +11,19 @@
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="bower_components/admin-lte/dist/css/AdminLTE.css" />
-        <link rel="stylesheet" href="assets/styles/custom-skin-blue-light.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
-        <link rel="stylesheet" href="assets/styles/main.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="assets/styles/custom-skin-blue-light.css" />
+        <link rel="stylesheet" href="assets/styles/main.css" />
         <!-- endbuild -->
     </head>
     <body ng-app="majimenatestApp" class="skin-blue-light sidebar-mini">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
+        <!--<div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>-->
         <header class="main-header" ui-view="navbar" ng-cloak=""></header>
         <div ui-view="sidemenu"></div>
         <div class="content-wrapper">
