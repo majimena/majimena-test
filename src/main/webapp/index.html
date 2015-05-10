@@ -10,19 +10,22 @@
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/admin-lte/dist/css/AdminLTE.css" />
+        <link rel="stylesheet" href="assets/styles/custom-skin-blue-light.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="majimenatestApp">
+    <body ng-app="majimenatestApp" class="skin-blue-light sidebar-mini">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
-        <div ui-view="navbar" ng-cloak=""></div>
-        <div class="container">
+        <header class="main-header" ui-view="navbar" ng-cloak=""></header>
+        <div ui-view="sidemenu"></div>
+        <div class="content-wrapper">
             <div class="well" ui-view="content"></div>
 
             <div class="footer">
@@ -58,6 +61,7 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
         <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+        <script src="bower_components/admin-lte/dist/js/app.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -83,9 +87,11 @@
         <script src="scripts/components/admin/monitoring.service.js"></script>
         <script src="scripts/components/navbar/navbar.directive.js"></script>
         <script src="scripts/components/navbar/navbar.controller.js"></script>
+        <script src="scripts/components/sidemenu/sidemenu.controller.js"></script>
         <script src="scripts/components/user/user.service.js"></script>
         <script src="scripts/components/util/truncate.filter.js"></script>
         <script src="scripts/components/util/base64.service.js"></script>
+        <script src="scripts/components/util/share.service.js"></script>
         <script src="scripts/components/util/parse-links.service.js"></script>
         <script src="scripts/app/account/account.js"></script>
         <script src="scripts/app/account/activate/activate.js"></script>
