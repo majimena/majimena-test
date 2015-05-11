@@ -10,29 +10,45 @@
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="bower_components/admin-lte/dist/css/AdminLTE.css" />
+        <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
+        <link rel="stylesheet" href="bower_components/morrisjs/morris.css" />
+        <link rel="stylesheet" href="bower_components/datatables-responsive/css/dataTables.responsive.css" />
+        <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
+        <link rel="stylesheet" href="bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="assets/styles/custom-skin-blue-light.css" />
         <link rel="stylesheet" href="assets/styles/main.css" />
+        <link rel="stylesheet" href="assets/styles/custom-theme.css" />
         <!-- endbuild -->
     </head>
-    <body ng-app="majimenatestApp" class="skin-blue-light sidebar-mini">
+    <body ng-app="majimenatestApp">
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!--<div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>-->
         <header class="main-header" ui-view="navbar" ng-cloak=""></header>
-        <div ui-view="sidemenu"></div>
-        <div class="content-wrapper">
-            <div class="well" ui-view="content"></div>
-
+        <div id="page-wrapper">
+            <div ui-view="content" style="margin-top:50px;"></div>
             <div class="footer">
                 <p translate="footer">This is your footer</p>
             </div>
         </div>
+
+        <script>
+            var AdminLTEOptions = {
+                //Enable sidebar expand on hover effect for sidebar mini
+                //This option is forced to true if both the fixed layout and sidebar mini
+                //are used together
+                sidebarExpandOnHover: true,
+                //BoxRefresh Plugin
+                enableBoxRefresh: true,
+                //Bootstrap.js tooltip
+                enableBSToppltip: true
+            };
+        </script>
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
         <script>
@@ -62,7 +78,16 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
         <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
         <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-        <script src="bower_components/admin-lte/dist/js/app.js"></script>
+        <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+        <script src="bower_components/flot/jquery.flot.js"></script>
+        <script src="bower_components/holderjs/holder.js"></script>
+        <script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+        <script src="bower_components/raphael/raphael.js"></script>
+        <script src="bower_components/mocha/mocha.js"></script>
+        <script src="bower_components/morrisjs/morris.js"></script>
+        <script src="bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
+        <script src="bower_components/flot.tooltip/js/jquery.flot.tooltip.js"></script>
+        <script src="bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

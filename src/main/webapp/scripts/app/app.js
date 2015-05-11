@@ -90,10 +90,6 @@ angular.module('majimenatestApp', ['LocalStorageModule', 'tmh.dynamicLocale',
                 'navbar@': {
                     templateUrl: 'scripts/components/navbar/navbar.html',
                     controller: 'NavbarController'
-                },
-                'sidemenu@': {
-                    templateUrl: 'scripts/components/sidemenu/sidemenu.html',
-                    controller: 'SidemenuController'
                 }
             },
             resolve: {
