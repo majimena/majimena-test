@@ -16,20 +16,25 @@ angular.module('majimenatestApp')
         };
         $scope.loadAll();
 
-        $scope.create = function () {
-            Project.update($scope.project,
-                function () {
-                    $scope.loadAll();
-                    $('#saveProjectModal').modal('hide');
-                    $scope.clear();
-                });
-        };
-
-        $scope.update = function (id) {
+        $scope.showUpdate = function (id) {
             Project.get({id: id}, function(result) {
                 $scope.project = result;
                 $('#saveProjectModal').modal('show');
             });
+        };
+
+        $scope.save = function () {
+            if ($scope.project.id != null) {
+                Project.update($scope.project,
+                    function () {
+                        $scope.refresh();
+                    });
+            } else {
+                Project.save($scope.project,
+                    function () {
+                        $scope.refresh();
+                    });
+            }
         };
 
         $scope.delete = function (id) {
@@ -48,8 +53,14 @@ angular.module('majimenatestApp')
                 });
         };
 
+        $scope.refresh = function () {
+            $scope.loadAll();
+            $('#saveProjectModal').modal('hide');
+            $scope.clear();
+        };
+
         $scope.clear = function () {
-            $scope.project = {name: null, description: null, id: null};
+            $scope.project = {name: null, description: null, owner: null, id: null};
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
         };

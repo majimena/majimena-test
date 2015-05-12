@@ -30,6 +30,9 @@ public class Project implements Serializable {
     @Column(name = "description", length = 255, nullable = false)
     private String description;
 
+    @Column(name = "owner")
+    private Long owner;
+
     public Long getId() {
         return id;
     }
@@ -52,6 +55,14 @@ public class Project implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Long getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Long owner) {
+        this.owner = owner;
     }
 
     @Override
@@ -81,6 +92,7 @@ public class Project implements Serializable {
                 "id=" + id +
                 ", name='" + name + "'" +
                 ", description='" + description + "'" +
+                ", owner='" + owner + "'" +
                 '}';
     }
 }

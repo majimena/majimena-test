@@ -28,7 +28,6 @@ angular.module('majimenatestApp')
  */
     .constant('LANGUAGES', [
         'en', 'fr'
-        ,'ja'
         //JHipster will add new languages here
     ]
 );

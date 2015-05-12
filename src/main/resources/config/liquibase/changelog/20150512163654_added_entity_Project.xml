@@ -10,7 +10,7 @@
     <!--
         Added the entity Project.
     -->
-    <changeSet id="20150505100445" author="jhipster">
+    <changeSet id="20150512163654" author="jhipster">
         <createTable tableName="PROJECT">
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
@@ -21,6 +21,7 @@
             <column name="description" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
+            <column name="owner" type="bigint"/>
         </createTable>
         
     </changeSet>

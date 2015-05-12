@@ -28,6 +28,15 @@
                 "maxlength"
             ],
             "fieldValidateRulesMaxlength": "255"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "owner",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "Owner",
+            "fieldNameUnderscored": "owner",
+            "fieldInJavaBeanMethod": "Owner",
+            "fieldValidate": false
         }
     ],
     "fieldsContainOwnerManyToMany": false,
@@ -37,7 +46,7 @@
     "fieldsContainBigDecimal": false,
     "fieldsContainDateTime": false,
     "fieldsContainDate": false,
-    "changelogDate": "20150505100445",
+    "changelogDate": "20150512163654",
     "pagination": "pagination",
     "validation": true
 }

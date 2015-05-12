@@ -45,23 +45,23 @@ angular.module('majimenatestApp', ['LocalStorageModule', 'tmh.dynamicLocale',
             }
         };
     })
-
+    
     .factory('authInterceptor', function ($rootScope, $q, $location, localStorageService) {
         return {
             // Add authorization token to headers
             request: function (config) {
                 config.headers = config.headers || {};
                 var token = localStorageService.get('token');
-
+                
                 if (token && token.expires_at && token.expires_at > new Date().getTime()) {
                     config.headers.Authorization = 'Bearer ' + token.access_token;
                 }
-
+                
                 return config;
             }
         };
     })
-
+    
     .factory('authExpiredInterceptor', function ($rootScope, $q, $injector, localStorageService) {
         return {
             responseError: function (response) {

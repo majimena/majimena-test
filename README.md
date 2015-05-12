@@ -1,1 +1,2 @@
-# majimena-test
+README for majimenatest
+==========================

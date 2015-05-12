@@ -11,10 +11,10 @@
     "devDatabaseType": "mysql",
     "prodDatabaseType": "mysql",
     "searchEngine": "no",
-    "useCompass": false,
+    "useCompass": true,
     "buildTool": "maven",
     "frontendBuilder": "grunt",
     "javaVersion": "8",
-    "rememberMeKey": "084c7e3012977a4347833b45d3a70abc55333565"
+    "rememberMeKey": "9506054a324b72eacf218666fffefb7d897f7abb"
   }
 }

@@ -14,7 +14,7 @@ module.exports = function (config) {
             // bower:js
             'main/webapp/bower_components/modernizr/modernizr.js',
             'main/webapp/bower_components/jquery/dist/jquery.js',
-            'main/webapp/bower_components/bootstrap/dist/js/bootstrap.js',
+            'main/webapp/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
             'main/webapp/bower_components/json3/lib/json3.js',
             'main/webapp/bower_components/angular/angular.js',
             'main/webapp/bower_components/angular-ui-router/release/angular-ui-router.js',
@@ -28,6 +28,7 @@ module.exports = function (config) {
             'main/webapp/bower_components/angular-local-storage/dist/angular-local-storage.js',
             'main/webapp/bower_components/angular-cache-buster/angular-cache-buster.js',
             'main/webapp/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
+            'main/webapp/bower_components/bootstrap/dist/js/bootstrap.js',
             'main/webapp/bower_components/datatables/media/js/jquery.dataTables.js',
             'main/webapp/bower_components/flot/jquery.flot.js',
             'main/webapp/bower_components/holderjs/holder.js',

@@ -1,4 +1,4 @@
-// Generated on 2015-05-05 using generator-jhipster 2.9.2
+// Generated on 2015-05-12 using generator-jhipster 2.10.1
 'use strict';
 var fs = require('fs');
 
@@ -38,6 +38,10 @@ module.exports = function (grunt) {
                 files: ['Gruntfile.js', 'pom.xml'],
                 tasks: ['ngconstant:dev']
             },
+            compass: {
+                files: ['src/main/scss/**/*.{scss,sass}'],
+                tasks: ['compass:server']
+            },
             styles: {
                 files: ['src/main/webapp/assets/styles/**/*.css']
             }
@@ -56,11 +60,13 @@ module.exports = function (grunt) {
         },
         wiredep: {
             app: {
-                src: ['src/main/webapp/index.html'],
+                src: ['src/main/webapp/index.html', 'src/main/scss/main.scss'],
                 exclude: [
-                    /angular-i18n/,  // localizations are loaded dynamically
-                    /swagger-ui/
-                ]
+                    /angular-i18n/, // localizations are loaded dynamically
+                    /swagger-ui/,
+                    'bower_components/bootstrap/' // Exclude Bootstrap LESS as we use bootstrap-sass
+                ],
+                ignorePath: /\.\.\/webapp\/bower_components\// // remove ../webapp/bower_components/ from paths of injected sass files 
             },
             test: {
                 src: 'src/test/javascript/karma.conf.js',
@@ -144,6 +150,27 @@ module.exports = function (grunt) {
                     dest: '.tmp/spec',
                     ext: '.js'
                 }]
+            }
+        },
+        compass: {
+            options: {
+                sassDir: 'src/main/scss',
+                cssDir: 'src/main/webapp/assets/styles',
+                generatedImagesDir: '.tmp/assets/images/generated',
+                imagesDir: 'src/main/webapp/assets/images',
+                javascriptsDir: 'src/main/webapp/scripts',
+                fontsDir: 'src/main/webapp/assets/fonts',
+                importPath: 'src/main/webapp/bower_components',
+                httpImagesPath: '/assets/images',
+                httpGeneratedImagesPath: '/assets/images/generated',
+                httpFontsPath: '/assets/fonts',
+                relativeAssets: false
+            },
+            dist: {},
+            server: {
+                options: {
+                    debugInfo: true
+                }
             }
         },
         concat: {
@@ -318,10 +345,13 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
+                'compass:server'
             ],
             test: [
+                'compass'
             ],
             dist: [
+                'compass:dist',
                 'imagemin',
                 'svgmin'
             ]

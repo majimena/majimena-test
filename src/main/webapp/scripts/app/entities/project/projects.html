@@ -1,11 +1,8 @@
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header" translate="majimenatestApp.project.home.title">Project</h1>
-    </div>
-</div>
-<div style="margin-top:20px;">
+<div>
 
-    <div class="container-fluid">
+    <h2 translate="majimenatestApp.project.home.title">Project</h2>
+
+    <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <button class="btn btn-primary" data-toggle="modal" data-target="#saveProjectModal" ng-click="clear()">
@@ -19,7 +16,7 @@
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form name="editForm" role="form" novalidate ng-submit="create()" show-validation>
+                <form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
 
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
@@ -64,6 +61,12 @@
                                     This field cannot be longer than 255 characters.
                                 </p>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="majimenatestApp.project.owner">Owner</label>
+                            <input type="number" class="form-control" name="owner"
+                                   ng-model="project.owner">
+
                         </div>
 
                     </div>
@@ -112,6 +115,7 @@
                     <th>ID</th>
                     <th translate="majimenatestApp.project.name">Name</th>
                     <th translate="majimenatestApp.project.description">Description</th>
+                    <th translate="majimenatestApp.project.owner">Owner</th>
                     <th></th>
                 </tr>
             </thead>
@@ -120,6 +124,7 @@
                     <td><a ui-sref="projectDetail({id:project.id})">{{project.id}}</a></td>
                     <td>{{project.name}}</td>
                     <td>{{project.description}}</td>
+                    <td>{{project.owner}}</td>
                     <td>
                         <button type="submit"
                                 ui-sref="projectDetail({id:project.id})"
@@ -127,7 +132,7 @@
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
                         </button>
                         <button type="submit"
-                                ng-click="update(project.id)"
+                                ng-click="showUpdate(project.id)"
                                 class="btn btn-primary btn-sm">
                             <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
                         </button>

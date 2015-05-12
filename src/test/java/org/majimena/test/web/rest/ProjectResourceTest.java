@@ -43,6 +43,9 @@ public class ProjectResourceTest {
     private static final String DEFAULT_DESCRIPTION = "SAMPLE_TEXT";
     private static final String UPDATED_DESCRIPTION = "UPDATED_TEXT";
 
+    private static final Long DEFAULT_OWNER = 0L;
+    private static final Long UPDATED_OWNER = 1L;
+
     @Inject
     private ProjectRepository projectRepository;
 
@@ -63,6 +66,7 @@ public class ProjectResourceTest {
         project = new Project();
         project.setName(DEFAULT_NAME);
         project.setDescription(DEFAULT_DESCRIPTION);
+        project.setOwner(DEFAULT_OWNER);
     }
 
     @Test
@@ -82,6 +86,7 @@ public class ProjectResourceTest {
         Project testProject = projects.get(projects.size() - 1);
         assertThat(testProject.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testProject.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testProject.getOwner()).isEqualTo(DEFAULT_OWNER);
     }
 
     @Test
@@ -134,7 +139,8 @@ public class ProjectResourceTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(project.getId().intValue())))
                 .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-                .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())));
+                .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+                .andExpect(jsonPath("$.[*].owner").value(hasItem(DEFAULT_OWNER.intValue())));
     }
 
     @Test
@@ -149,7 +155,8 @@ public class ProjectResourceTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(project.getId().intValue()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
-            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()));
+            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
+            .andExpect(jsonPath("$.owner").value(DEFAULT_OWNER.intValue()));
     }
 
     @Test
@@ -171,6 +178,7 @@ public class ProjectResourceTest {
         // Update the project
         project.setName(UPDATED_NAME);
         project.setDescription(UPDATED_DESCRIPTION);
+        project.setOwner(UPDATED_OWNER);
         restProjectMockMvc.perform(put("/api/projects")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(project)))
@@ -182,6 +190,7 @@ public class ProjectResourceTest {
         Project testProject = projects.get(projects.size() - 1);
         assertThat(testProject.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testProject.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testProject.getOwner()).isEqualTo(UPDATED_OWNER);
     }
 
     @Test

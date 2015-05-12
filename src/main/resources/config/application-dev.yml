@@ -7,8 +7,8 @@ spring:
     datasource:
         dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
         url: jdbc:mysql://192.168.59.103:3306/mjtestdb
-        databaseName:
-        serverName:
+        databaseName: 
+        serverName: 
         username: root
         password: password
         cachePrepStmts: true
