@@ -1,5 +1,3 @@
-hoge
-<!--
 <div class="sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav in" id="side-menu">
@@ -9,7 +7,32 @@ hoge
             <li ui-sref-active="active">
                 <a><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a>
             </li>
-            <li>
+            <li ng-class="{active: collapseVar==1}">{{dropDown}}
+                <a href="" ng-click="check(1)"><i class="fa fa-wrench fa-fw"></i> UI Elements<span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.panels-wells">Panels and Wells</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.buttons">Buttons</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.notifications">Notifications</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.typography">Typography</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.icons"> Icons</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="dashboard.grid">Grid</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li ng-class="{active: collapseVar==1}">
                 <a href="#" ng-click="check(1)"><i class="fa fa-database fa-fw"></i>Master Data<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse" ng-class="{in: collapseVar==1}" collapse="collapseVar!=1">
                     <li ui-sref-active="active">
@@ -46,4 +69,3 @@ hoge
         </ul>
     </div>
 </div>
--->
