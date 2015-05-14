@@ -1,0 +1,26 @@
+$theme-color: #5bc0de;
+$text-color: #555555;
+
+//$body-bg: $base-color;
+//
+//$link-color: $accent-color;
+//
+//$btn-default-bg: $base-color;
+//$btn-default-border: darken($base-color, 10%);
+//$btn-primary-bg: $accent-color;
+//$btn-primary-border: darken($accent-color, 10%);
+
+$navbar-height: 40px;
+$navbar-margin-bottom: 0;
+$navbar-default-bg: $theme-color;
+//$navbar-default-color: #ffffff;
+//$navbar-defalut-link-color: #ffffff;
+//$navbar-default-link-hover-color: $base-text-color - 60;
+//$navbar-default-link-active-color: darken($base-text-color, 5%);
+$navbar-default-link-hover-bg: darken($navbar-default-bg, 10%);
+$navbar-default-link-active-bg: darken($navbar-default-bg, 10%);
+$navbar-default-brand-color: #ffffff;
+
+$dropdown-link-active-bg: darken($navbar-default-bg, 10%);
+
+//$hr-border: darken($base-color, 10%);
