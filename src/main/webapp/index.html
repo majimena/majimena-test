@@ -29,10 +29,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!--<div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>-->
-        <div ui-view="navbar" ng-cloak=""></div>
-        <div id="page-wrapper">
-            <div ui-view="content"></div>
-            <div class="footer"></div>
+        <div id="wrapper">
+            <div id="navbar-wrapper" ui-view="navbar" ng-cloak="">
+            </div>
+            <div id="page-wrapper">
+                <div ui-view="content"></div>
+                <div class="footer"></div>
+            </div>
         </div>
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
@@ -65,6 +68,7 @@
         <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
         <script src="bower_components/angular-toggle-switch/angular-toggle-switch.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
         <script src="bower_components/Chart.js/Chart.js"></script>
         <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>

@@ -1700,7 +1700,7 @@ html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000327}}
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #555555;
@@ -7649,7 +7649,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -7776,7 +7776,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857;
@@ -8677,28 +8677,56 @@ body {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003134}}
 .sidebar {
   margin-top: 1px;
+  width: 250px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003138}}
 .sidebar ul li {
   border-bottom: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003141}}
 .sidebar ul li a {
   color: #6e6e6e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003143}}
-.sidebar ul li.active a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003144}}
+.sidebar ul li.active > a {
   color: black;
   background-color: #eeeeee;
 }
 
 /* ========== override fontawesome ========== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003150}}
 .fa-fw {
   margin-right: 0.7em;
 }
 
 /* ========== custome styles ========== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003155}}
+#page-wrapper.sidebar-collapse {
+  margin-left: 50px;
+  transition: all .2s ease-out 0s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003159}}
+#page-wrapper.sidebar-fullsize {
+  margin-left: 250px;
+  transition: all .2s ease-out 0s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003163}}
+#sidebar-wrapper.sidebar-fullsize {
+  transition: all .2s ease-out 0s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003168}}
+#sidebar-wrapper.sidebar.sidebar-collapse {
+  width: 50px;
+  transition: all .2s ease-out 0s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003172}}
+#sidebar-wrapper.sidebar-collapse span {
+  display: none;
+}

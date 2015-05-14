@@ -24,6 +24,7 @@
     "angular-toggle-switch": "1.2.1",
     "angular-local-storage": "0.1.5",
     "swagger-ui": "2.0.24",
+    "angular-bootstrap": "~0.13.0",
     "angular-cache-buster": "0.4.3",
     "angular-chart.js": "0.5.2",
     "ngInfiniteScroll": "1.2.0",

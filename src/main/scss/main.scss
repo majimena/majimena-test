@@ -133,6 +133,7 @@ body {
 /* ========== override sb-admin2 ========== */
 .sidebar {
     margin-top: 1px;
+    width: 250px;
 }
 .sidebar ul li {
     border-bottom: none;
@@ -140,7 +141,7 @@ body {
 .sidebar ul li a {
     color: lighten($text-color, 10%);
 }
-.sidebar ul li.active a {
+.sidebar ul li.active > a {
     color: darken($text-color, 50%);
     background-color: #eeeeee;
 }
@@ -151,3 +152,23 @@ body {
 }
 
 /* ========== custome styles ========== */
+#page-wrapper.sidebar-collapse {
+    margin-left: 50px;
+    transition: all .2s ease-out 0s;
+}
+#page-wrapper.sidebar-fullsize {
+    margin-left: 250px;
+    transition: all .2s ease-out 0s;
+}
+#sidebar-wrapper.sidebar-fullsize {
+    transition: all .2s ease-out 0s;
+}
+#sidebar-wrapper.sidebar-collapse {
+}
+#sidebar-wrapper.sidebar.sidebar-collapse {
+    width: 50px;
+    transition: all .2s ease-out 0s;
+}
+#sidebar-wrapper.sidebar-collapse span {
+    display: none;
+}
