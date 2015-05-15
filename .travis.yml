@@ -8,5 +8,13 @@ before_install:
   - gem install sass
   - gem install compass
 
+node_js:
+  - '0.10'
+  - '0.11'
+
+before_script:
+  - 'npm install -g bower grunt-cli karma'
+  - 'bower install'
+
 notifications:
   slack: majimenatest:L3BPfAVyCiFEXwQ6Q2qMI7c1

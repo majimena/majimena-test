@@ -133,7 +133,6 @@ body {
 /* ========== override sb-admin2 ========== */
 .sidebar {
     margin-top: 1px;
-    width: 250px;
 }
 .sidebar ul li {
     border-bottom: none;
@@ -157,7 +156,6 @@ body {
     transition: all .2s ease-out 0s;
 }
 #page-wrapper.sidebar-fullsize {
-    margin-left: 250px;
     transition: all .2s ease-out 0s;
 }
 #sidebar-wrapper.sidebar-fullsize {
