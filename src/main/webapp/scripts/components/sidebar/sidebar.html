@@ -9,48 +9,65 @@
             <li ui-sref-active="active">
                 <a><i class="fa fa-bar-chart-o fa-fw"></i><span>Charts</span></a>
             </li>
-            <li ng-class="{active: collapseVar==1}">
+            <li ng-class="{active: collapseVar == 1}">
                 <a href="#" ng-click="check(1)">
                     <i class="fa fa-database fa-fw"></i><span>Master Data</span><span class="fa arrow"></span>
                 </a>
                 <ul class="nav nav-second-level collapse" collapse="collapseVar!=1">
                     <li ui-sref-active="active">
-                        <a ui-sref="project"><i class="fa fa-university fa-fw"></i>Project</a>
+                        <a ui-sref="project">
+                            <i class="fa fa-university fa-fw"></i><span>Project</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="member"><i class="fa fa-users fa-fw"></i>Member</a>
+                        <a ui-sref="member">
+                            <i class="fa fa-users fa-fw"></i><span>Member</span>
+                        </a>
                     </li>
                 </ul>
             </li>
-            <li ng-class="{active: collapseVar==2}" has-role="ROLE_ADMIN">
+            <li ng-class="{active: collapseVar == 2}" has-role="ROLE_ADMIN">
                 <a href="#" ng-click="check(2)"><i class="fa fa-desktop fa-fw"></i><span class="hidden-tablet" translate="global.menu.admin.main">Admin</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse" collapse="collapseVar!=2">
+                <ul class="nav nav-second-level collapse" collapse="collapseVar != 2">
                     <li ui-sref-active="active">
-                        <a ui-sref="metrics"><span class="glyphicon glyphicon-dashboard"></span><span translate="global.menu.admin.metrics">Metrics</span></a>
+                        <a ui-sref="metrics">
+                            <i class="fa fa-pie-chart fa-fw"></i><span translate="global.menu.admin.metrics">Metrics</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="health"><span class="glyphicon glyphicon-heart"></span><span translate="global.menu.admin.health">Health</span></a>
+                        <a ui-sref="health">
+                            <i class="fa fa-heart fa-fw"></i><span translate="global.menu.admin.health">Health</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="configuration"><span class="glyphicon glyphicon-list-alt"></span><span translate="global.menu.admin.configuration">Configuration</span></a>
+                        <a ui-sref="configuration">
+                            <i class="fa fa-list-ol fa-fw"></i><span translate="global.menu.admin.configuration">Configuration</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="audits"><span class="glyphicon glyphicon-bell"></span><span translate="global.menu.admin.audits">Audits</span></a>
+                        <a ui-sref="audits">
+                            <i class="fa fa-bell fa-fw"></i><span translate="global.menu.admin.audits">Audits</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="logs"><span class="glyphicon glyphicon-tasks"></span><span translate="global.menu.admin.logs">Logs</span></a>
+                        <a ui-sref="logs">
+                            <i class="fa fa-tasks fa-fw"></i><span translate="global.menu.admin.logs">Logs</span>
+                        </a>
                     </li>
                     <li ui-sref-active="active">
-                        <a ui-sref="docs"><span class="glyphicon glyphicon-book"></span><span translate="global.menu.admin.apidocs">API Docs</span></a>
+                        <a ui-sref="docs">
+                            <i class="fa fa-book fa-fw"></i><span translate="global.menu.admin.apidocs">API Docs</span>
+                        </a>
                     </li>
                 </ul>
-            </li>
-            <li style="text-align:right;">
-                <a ng-click="toggleSideMenu()">
-                    <div ng-show="minimum === true"><i class="fa fa-long-arrow-right fa-fw"></i></div>
-                    <div ng-show="minimum !== true"><i class="fa fa-long-arrow-left"></i></div>
-                </a>
             </li>
         </ul>
     </div>
+    <div id="sidebar-footer" class="clearfix">
+        <a id="sidebar-collapse-toggle" ng-click="toggleSideMenu()">
+            <div ng-show="minimum === true"><i class="fa fa-ellipsis-h"></i></div>
+            <div ng-show="minimum !== true"><i class="fa fa-angle-double-left"></i></div>
+        </a>
+    </div>
+
 </div>

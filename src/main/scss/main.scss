@@ -112,6 +112,7 @@ ul#strength {
 /* customize body */
 body {
     padding-top: $navbar-height;
+    font-weight: 300;
 }
 
 /* customize navbar */
@@ -138,11 +139,18 @@ body {
     border-bottom: none;
 }
 .sidebar ul li a {
+    white-space: nowrap;
     color: lighten($text-color, 10%);
 }
 .sidebar ul li.active > a {
     color: darken($text-color, 50%);
     background-color: #eeeeee;
+}
+#sidebar-wrapper-wrapper {
+    height: auto !important;
+    margin: 0 auto -60px;
+    min-height: 100%;
+    padding: 0 0 60px;
 }
 
 /* ========== override fontawesome ========== */
@@ -150,23 +158,47 @@ body {
     margin-right: 0.7em;
 }
 
-/* ========== custome styles ========== */
+/* ========== custom styles ========== */
+/* sidebar menu and content defs */
 #page-wrapper.sidebar-collapse {
     margin-left: 50px;
-    transition: all .2s ease-out 0s;
+    transition: $transition-all;
 }
 #page-wrapper.sidebar-fullsize {
-    transition: all .2s ease-out 0s;
+    transition: $transition-all;
 }
 #sidebar-wrapper.sidebar-fullsize {
-    transition: all .2s ease-out 0s;
+    transition: $transition-all;
 }
 #sidebar-wrapper.sidebar-collapse {
 }
 #sidebar-wrapper.sidebar.sidebar-collapse {
     width: 50px;
-    transition: all .2s ease-out 0s;
+    transition: $transition-all;
 }
 #sidebar-wrapper.sidebar-collapse span {
     display: none;
+}
+#sidebar-wrapper #sidebar-footer {
+    font-size: $font-size-small;
+    width: 250px;
+    border-top: 1px solid #d8d8d8;
+    position: fixed;
+    bottom: 0;
+}
+@media screen and (max-width: 480px) {
+    #sidebar-wrapper #sidebar-footer {
+        display: none;
+    }
+}
+#sidebar-wrapper.sidebar-collapse #sidebar-footer {
+    width: 50px;
+    transition: $transition-all;
+}
+#sidebar-collapse-toggle {
+    width: 50px;
+    float: right;
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
 }
