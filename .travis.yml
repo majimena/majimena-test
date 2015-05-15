@@ -7,14 +7,8 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   - gem install sass
   - gem install compass
-
-node_js:
-  - '0.10'
-  - '0.11'
-
-before_script:
-  - 'npm install -g bower grunt-cli karma'
-  - 'bower install'
+  - npm install -g bower grunt-cli karma
+  - bower install
 
 notifications:
   slack: majimenatest:L3BPfAVyCiFEXwQ6Q2qMI7c1
