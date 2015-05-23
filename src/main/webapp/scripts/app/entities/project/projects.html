@@ -1,16 +1,18 @@
-<div>
-
-    <h2 translate="majimenatestApp.project.home.title">Project</h2>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#saveProjectModal" ng-click="clear()">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="majimenatestApp.project.home.createLabel">Create a new Project</span>
-                </button>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-lg-12 page-header">
+        <h3><span translate="majimenatestApp.project.home.title">Project</span></h3>
+        <p class="description">プロジェクトを作成してチーム内でテストケースを共有できるようにします。</p>
     </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 text-right">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#saveProjectModal" ng-click="clear()">
+            <i class="fa fa-bolt fa-fw"></i><span translate="majimenatestApp.project.home.createLabel">Create a new Project</span>
+        </button>
+    </div>
+</div>
+
+<div>
 
     <div class="modal fade" id="saveProjectModal" tabindex="-1" role="dialog" aria-labelledby="myProjectLabel"
          aria-hidden="true">
@@ -125,7 +127,7 @@
                     <td>{{project.name}}</td>
                     <td>{{project.description}}</td>
                     <td>{{project.owner}}</td>
-                    <td>
+                    <td class="text-right">
                         <button type="submit"
                                 ui-sref="projectDetail({id:project.id})"
                                 class="btn btn-info btn-sm">

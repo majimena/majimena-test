@@ -113,6 +113,7 @@ ul#strength {
 body {
     padding-top: $navbar-height;
     font-weight: 300;
+    text-rendering: optimizelegibility;
 }
 
 /* customize navbar */
@@ -155,6 +156,9 @@ body {
 
 /* ========== override fontawesome ========== */
 .fa-fw {
+    margin-right: 0.2em;
+}
+#side-menu .fa-fw {
     margin-right: 0.7em;
 }
 
@@ -201,4 +205,10 @@ body {
     display: block;
     padding: 10px 15px;
     text-align: center;
+}
+
+/* page header */
+.page-header .description {
+    font-size: $font-size-small;
+    margin: 0;
 }

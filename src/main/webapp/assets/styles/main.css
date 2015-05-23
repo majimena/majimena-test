@@ -1700,10 +1700,10 @@ html {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000327}}
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Kaku Gothic Pro", "Meiryo", "MS PGothic", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
+  color: #666666;
   background-color: #fff;
 }
 
@@ -1719,12 +1719,12 @@ textarea {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000348}}
 a {
-  color: #337ab7;
+  color: #72a53b;
   text-decoration: none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000352}}
 a:hover, a:focus {
-  color: #23527c;
+  color: #4b6d27;
   text-decoration: underline;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_scaffolding\.scss}line{font-family:\0000358}}
@@ -1812,7 +1812,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #222222;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_type\.scss}line{font-family:\0000316}}
 h1 small,
@@ -1983,12 +1983,12 @@ mark,
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_text-emphasis\.scss}line{font-family:\000035}}
 .text-primary {
-  color: #337ab7;
+  color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_text-emphasis\.scss}line{font-family:\000038}}
 a.text-primary:hover {
-  color: #286090;
+  color: #587f2e;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_text-emphasis\.scss}line{font-family:\000035}}
@@ -2038,12 +2038,12 @@ a.text-danger:hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_background-variant\.scss}line{font-family:\000035}}
 .bg-primary {
-  background-color: #337ab7;
+  background-color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_background-variant\.scss}line{font-family:\000038}}
 a.bg-primary:hover {
-  background-color: #286090;
+  background-color: #587f2e;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_background-variant\.scss}line{font-family:\000035}}
@@ -4248,7 +4248,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #959595;
+  color: #a6a6a6;
 }
 
 @media (min-width: 768px) {
@@ -4445,14 +4445,14 @@ select[multiple].input-lg,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000363}}
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #72a53b;
+  border-color: #659234;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000311}}
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #587f2e;
+  border-color: #466524;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000321}}
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
@@ -4460,26 +4460,26 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000329}}
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #72a53b;
+  border-color: #659234;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000340}}
 .btn-primary .badge {
-  color: #337ab7;
+  color: #72a53b;
   background-color: #fff;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000367}}
 .btn-success {
   color: #fff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #8CC152;
+  border-color: #7fb842;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000311}}
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #449d44;
-  border-color: #398439;
+  background-color: #72a53b;
+  border-color: #608b32;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000321}}
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
@@ -4487,26 +4487,26 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000329}}
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #8CC152;
+  border-color: #7fb842;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000340}}
 .btn-success .badge {
-  color: #5cb85c;
+  color: #8CC152;
   background-color: #fff;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000371}}
 .btn-info {
   color: #fff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #2494be;
+  border-color: #2084a9;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000311}}
 .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
   color: #fff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #1c7393;
+  border-color: #165b75;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000321}}
 .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
@@ -4514,26 +4514,26 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000329}}
 .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #2494be;
+  border-color: #2084a9;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000340}}
 .btn-info .badge {
-  color: #5bc0de;
+  color: #2494be;
   background-color: #fff;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000375}}
 .btn-warning {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #F6BB42;
+  border-color: #f5b22a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000311}}
 .btn-warning:hover, .btn-warning:focus, .btn-warning.focus, .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #f4a911;
+  border-color: #d7940a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000321}}
 .btn-warning:active, .btn-warning.active, .open > .btn-warning.dropdown-toggle {
@@ -4541,26 +4541,26 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000329}}
 .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #F6BB42;
+  border-color: #f5b22a;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000340}}
 .btn-warning .badge {
-  color: #f0ad4e;
+  color: #F6BB42;
   background-color: #fff;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000379}}
 .btn-danger {
   color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #DA4453;
+  border-color: #d62f3f;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000311}}
 .btn-danger:hover, .btn-danger:focus, .btn-danger.focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
   color: #fff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #c42737;
+  border-color: #a6212e;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000321}}
 .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle {
@@ -4568,18 +4568,18 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000329}}
 .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger.focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #DA4453;
+  border-color: #d62f3f;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000340}}
 .btn-danger .badge {
-  color: #d9534f;
+  color: #DA4453;
   background-color: #fff;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000388}}
 .btn-link {
-  color: #337ab7;
+  color: #72a53b;
   font-weight: normal;
   border-radius: 0;
 }
@@ -4595,7 +4595,7 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\00003107}}
 .btn-link:hover, .btn-link:focus {
-  color: #23527c;
+  color: #4b6d27;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4773,7 +4773,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #31b0d5;
+  background-color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_dropdowns\.scss}line{font-family:\00003102}}
@@ -5291,7 +5291,7 @@ tbody.collapse.in {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000346}}
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #337ab7;
+  border-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\0000359}}
 .nav .nav-divider {
@@ -5349,7 +5349,7 @@ tbody.collapse.in {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003131}}
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navs\.scss}line{font-family:\00003144}}
@@ -5874,8 +5874,8 @@ tbody.collapse.in {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003398}}
 .navbar-default {
-  background-color: #5bc0de;
-  border-color: #3fb5d8;
+  background-color: #8CC152;
+  border-color: #7bb240;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003402}}
 .navbar-default .navbar-brand {
@@ -5897,12 +5897,12 @@ tbody.collapse.in {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003419}}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #333;
-  background-color: #31b0d5;
+  background-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003426}}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #31b0d5;
+  background-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003434}}
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -5924,11 +5924,11 @@ tbody.collapse.in {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003454}}
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #3fb5d8;
+  border-color: #7bb240;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003463}}
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #31b0d5;
+  background-color: #72a53b;
   color: #555;
 }
 @media (max-width: 767px) {
@@ -5939,12 +5939,12 @@ tbody.collapse.in {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003476}}
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #333;
-    background-color: #31b0d5;
+    background-color: #72a53b;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003483}}
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
-    background-color: #31b0d5;
+    background-color: #72a53b;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar\.scss}line{font-family:\00003491}}
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -6124,7 +6124,7 @@ tbody.collapse.in {
   padding: 6px 12px;
   line-height: 1.42857;
   text-decoration: none;
-  color: #337ab7;
+  color: #72a53b;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -6146,7 +6146,7 @@ tbody.collapse.in {
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  color: #23527c;
+  color: #4b6d27;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -6157,8 +6157,8 @@ tbody.collapse.in {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #72a53b;
+  border-color: #72a53b;
   cursor: default;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_pagination\.scss}line{font-family:\0000363}}
@@ -6308,47 +6308,47 @@ a.label:hover, a.label:focus {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000348}}
 .label-primary {
-  background-color: #337ab7;
+  background-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels\.scss}line{font-family:\000037}}
 .label-primary[href]:hover, .label-primary[href]:focus {
-  background-color: #286090;
+  background-color: #587f2e;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000352}}
 .label-success {
-  background-color: #5cb85c;
+  background-color: #8CC152;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels\.scss}line{font-family:\000037}}
 .label-success[href]:hover, .label-success[href]:focus {
-  background-color: #449d44;
+  background-color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000356}}
 .label-info {
-  background-color: #5bc0de;
+  background-color: #2494be;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels\.scss}line{font-family:\000037}}
 .label-info[href]:hover, .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #1c7393;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000360}}
 .label-warning {
-  background-color: #f0ad4e;
+  background-color: #F6BB42;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels\.scss}line{font-family:\000037}}
 .label-warning[href]:hover, .label-warning[href]:focus {
-  background-color: #ec971f;
+  background-color: #f4a911;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000364}}
 .label-danger {
-  background-color: #d9534f;
+  background-color: #DA4453;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels\.scss}line{font-family:\000037}}
 .label-danger[href]:hover, .label-danger[href]:focus {
-  background-color: #c9302c;
+  background-color: #c42737;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\000037}}
@@ -6382,7 +6382,7 @@ a.label:hover, a.label:focus {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\0000340}}
 .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #72a53b;
   background-color: #fff;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_badges\.scss}line{font-family:\0000346}}
@@ -6477,14 +6477,14 @@ a.badge:hover, a.badge:focus {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_thumbnails\.scss}line{font-family:\0000327}}
 .thumbnail .caption {
   padding: 9px;
-  color: #555555;
+  color: #666666;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_thumbnails\.scss}line{font-family:\0000334}}
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_alerts\.scss}line{font-family:\000039}}
@@ -6623,7 +6623,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #fff;
   text-align: center;
-  background-color: #337ab7;
+  background-color: #72a53b;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -6650,7 +6650,7 @@ a.thumbnail.active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_progress-bars\.scss}line{font-family:\0000373}}
 .progress-bar-success {
-  background-color: #5cb85c;
+  background-color: #8CC152;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-success {
@@ -6661,7 +6661,7 @@ a.thumbnail.active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_progress-bars\.scss}line{font-family:\0000377}}
 .progress-bar-info {
-  background-color: #5bc0de;
+  background-color: #2494be;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-info {
@@ -6672,7 +6672,7 @@ a.thumbnail.active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_progress-bars\.scss}line{font-family:\0000381}}
 .progress-bar-warning {
-  background-color: #f0ad4e;
+  background-color: #F6BB42;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-warning {
@@ -6683,7 +6683,7 @@ a.thumbnail.active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_progress-bars\.scss}line{font-family:\0000385}}
 .progress-bar-danger {
-  background-color: #d9534f;
+  background-color: #DA4453;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-danger {
@@ -6820,8 +6820,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #72a53b;
+  border-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_list-group\.scss}line{font-family:\0000390}}
 .list-group-item.active .list-group-item-heading,
@@ -6835,7 +6835,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_list-group\.scss}line{font-family:\0000395}}
 .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-  color: #c7ddef;
+  color: #d7e9c3;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_list-group\.scss}line{font-family:\000034}}
@@ -7268,26 +7268,26 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003251}}
 .panel-primary {
-  border-color: #337ab7;
+  border-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\000036}}
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #72a53b;
+  border-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000311}}
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #337ab7;
+  border-top-color: #72a53b;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000314}}
 .panel-primary > .panel-heading .badge {
-  color: #337ab7;
+  color: #72a53b;
   background-color: #fff;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_panels\.scss}line{font-family:\0000320}}
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #337ab7;
+  border-bottom-color: #72a53b;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_panels\.scss}line{font-family:\00003254}}
@@ -7649,7 +7649,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Kaku Gothic Pro", "Meiryo", "MS PGothic", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -7776,7 +7776,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "Hiragino Kaku Gothic Pro", "Meiryo", "MS PGothic", sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857;
@@ -8653,15 +8653,16 @@ ul#strength {
 body {
   padding-top: 40px;
   font-weight: 300;
+  text-rendering: optimizelegibility;
 }
 
 /* customize navbar */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003120}}
 .navbar-default {
-  border-color: #5bc0de;
+  border-color: #8CC152;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003123}}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -8675,29 +8676,29 @@ body {
 }
 
 /* ========== override sb-admin2 ========== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003136}}
 .sidebar {
   margin-top: 1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003139}}
 .sidebar ul li {
   border-bottom: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003142}}
 .sidebar ul li a {
   white-space: nowrap;
-  color: #6e6e6e;
+  color: gray;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003146}}
 .sidebar ul li.active > a {
   color: black;
   background-color: #eeeeee;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003150}}
 #sidebar-wrapper-wrapper {
   height: auto !important;
   margin: 0 auto -60px;
@@ -8706,41 +8707,46 @@ body {
 }
 
 /* ========== override fontawesome ========== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003158}}
 .fa-fw {
+  margin-right: 0.2em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003161}}
+#side-menu .fa-fw {
   margin-right: 0.7em;
 }
 
 /* ========== custom styles ========== */
 /* sidebar menu and content defs */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003167}}
 #page-wrapper.sidebar-collapse {
   margin-left: 50px;
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003171}}
 #page-wrapper.sidebar-fullsize {
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003174}}
 #sidebar-wrapper.sidebar-fullsize {
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003179}}
 #sidebar-wrapper.sidebar.sidebar-collapse {
   width: 50px;
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003183}}
 #sidebar-wrapper.sidebar-collapse span {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003182}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003186}}
 #sidebar-wrapper #sidebar-footer {
   font-size: 12px;
   width: 250px;
@@ -8750,22 +8756,29 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003194}}
   #sidebar-wrapper #sidebar-footer {
     display: none;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003198}}
 #sidebar-wrapper.sidebar-collapse #sidebar-footer {
   width: 50px;
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003202}}
 #sidebar-collapse-toggle {
   width: 50px;
   float: right;
   display: block;
   padding: 10px 15px;
   text-align: center;
+}
+
+/* page header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003211}}
+.page-header .description {
+  font-size: 12px;
+  margin: 0;
 }

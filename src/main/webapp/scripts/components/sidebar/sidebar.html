@@ -2,12 +2,12 @@
     <div class="sidebar-nav navbar-collapse">
         <ul id="side-menu" class="nav in">
             <li ui-sref-active="active">
-                <a ui-sref="home">
+                <a ui-sref="home" ng-click="check(0)">
                     <i class="fa fa-dashboard fa-fw"></i><span>Dashboard</span>
                 </a>
             </li>
             <li ui-sref-active="active">
-                <a><i class="fa fa-bar-chart-o fa-fw"></i><span>Charts</span></a>
+                <a ng-click="check(0)"><i class="fa fa-bar-chart-o fa-fw"></i><span>Charts</span></a>
             </li>
             <li ng-class="{active: collapseVar == 1}">
                 <a href="#" ng-click="check(1)">

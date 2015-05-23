@@ -10,5 +10,8 @@ before_install:
   - npm install -g bower grunt-cli karma
   - bower install
 
+after_success:
+  - mvn clean test saga:coverage jacoco:report coveralls:report -Pprod
+
 notifications:
   slack: majimenatest:L3BPfAVyCiFEXwQ6Q2qMI7c1
