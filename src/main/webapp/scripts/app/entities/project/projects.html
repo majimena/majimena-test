@@ -6,84 +6,12 @@
 </div>
 <div class="row">
     <div class="col-lg-12 text-right">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#saveProjectModal" ng-click="clear()">
+        <button class="btn btn-primary" ui-sref="projectForm({id:'new'})">
             <i class="fa fa-bolt fa-fw"></i><span translate="majimenatestApp.project.home.createLabel">Create a new Project</span>
         </button>
     </div>
 </div>
-
-<div>
-
-    <div class="modal fade" id="saveProjectModal" tabindex="-1" role="dialog" aria-labelledby="myProjectLabel"
-         aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                                ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myProjectLabel" translate="majimenatestApp.project.home.createOrEditLabel">Create or edit a Project</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>ID</label>
-                            <input type="text" class="form-control" name="id"
-                                   ng-model="project.id" readonly>
-                        </div>
-
-                        <div class="form-group">
-                            <label translate="majimenatestApp.project.name">Name</label>
-                            <input type="text" class="form-control" name="name"
-                                   ng-model="project.name" required ng-maxlength="255">
-
-                            <div ng-show="editForm.name.$invalid">
-                                <p class="help-block"
-                                   ng-show="editForm.name.$error.required" translate="entity.validation.required">
-                                    This field is required.
-                                </p>
-                                <p class="help-block"
-                                   ng-show="editForm.name.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
-                                    This field cannot be longer than 255 characters.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label translate="majimenatestApp.project.description">Description</label>
-                            <input type="text" class="form-control" name="description"
-                                   ng-model="project.description" required ng-maxlength="255">
-
-                            <div ng-show="editForm.description.$invalid">
-                                <p class="help-block"
-                                   ng-show="editForm.description.$error.required" translate="entity.validation.required">
-                                    This field is required.
-                                </p>
-                                <p class="help-block"
-                                   ng-show="editForm.description.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
-                                    This field cannot be longer than 255 characters.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label translate="majimenatestApp.project.owner">Owner</label>
-                            <input type="number" class="form-control" name="owner"
-                                   ng-model="project.owner">
-
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
-                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
-                        </button>
-                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="row">
 
     <div class="modal fade" id="deleteProjectConfirmation">
         <div class="modal-dialog">
@@ -117,7 +45,7 @@
                     <th>ID</th>
                     <th translate="majimenatestApp.project.name">Name</th>
                     <th translate="majimenatestApp.project.description">Description</th>
-                    <th translate="majimenatestApp.project.owner">Owner</th>
+                    <th translate="majimenatestApp.project.owner">Project Owner</th>
                     <th></th>
                 </tr>
             </thead>
@@ -128,20 +56,14 @@
                     <td>{{project.description}}</td>
                     <td>{{project.owner}}</td>
                     <td class="text-right">
-                        <button type="submit"
-                                ui-sref="projectDetail({id:project.id})"
-                                class="btn btn-info btn-sm">
-                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        <button type="submit" ui-sref="projectDetail({id:project.id})" class="btn btn-default btn-sm">
+                            <i class="fa fa-eye fa-fw"></i><span translate="entity.action.view"> View</span>
                         </button>
-                        <button type="submit"
-                                ng-click="showUpdate(project.id)"
-                                class="btn btn-primary btn-sm">
-                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        <button type="submit" ui-sref="projectForm({id: project.id})" class="btn btn-default btn-sm">
+                            <i class="fa fa-pencil fa-fw"></i><span translate="entity.action.edit"> Edit</span>
                         </button>
-                        <button type="submit"
-                                ng-click="delete(project.id)"
-                                class="btn btn-danger btn-sm">
-                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        <button type="submit" ng-click="delete(project.id)" class="btn btn-danger btn-sm">
+                            <i class="fa fa-trash fa-fw"></i><span translate="entity.action.delete"> Delete</span>
                         </button>
                     </td>
                 </tr>

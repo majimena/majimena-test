@@ -42,5 +42,25 @@ angular.module('majimenatestApp')
                         return $translate.refresh();
                     }]
                 }
+            })
+            .state('projectForm', {
+                parent: 'entity',
+                url: '/project/:id/form',
+                data: {
+                    roles: ['ROLE_USER'],
+                    pageTitle: 'majimenatestApp.project.form.title'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/project/project-form.html',
+                        controller: 'ProjectFormController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('project');
+                        return $translate.refresh();
+                    }]
+                }
             });
     });

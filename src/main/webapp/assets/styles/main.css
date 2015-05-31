@@ -4472,14 +4472,14 @@ select[multiple].input-lg,
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons\.scss}line{font-family:\0000367}}
 .btn-success {
   color: #fff;
-  background-color: #8CC152;
-  border-color: #7fb842;
+  background-color: #3BAFDA;
+  border-color: #28a5d4;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000311}}
 .btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #72a53b;
-  border-color: #608b32;
+  background-color: #2494be;
+  border-color: #1e7da0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000321}}
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
@@ -4487,12 +4487,12 @@ select[multiple].input-lg,
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000329}}
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-  background-color: #8CC152;
-  border-color: #7fb842;
+  background-color: #3BAFDA;
+  border-color: #28a5d4;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons\.scss}line{font-family:\0000340}}
 .btn-success .badge {
-  color: #8CC152;
+  color: #3BAFDA;
   background-color: #fff;
 }
 
@@ -6317,11 +6317,11 @@ a.label:hover, a.label:focus {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000352}}
 .label-success {
-  background-color: #8CC152;
+  background-color: #3BAFDA;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels\.scss}line{font-family:\000037}}
 .label-success[href]:hover, .label-success[href]:focus {
-  background-color: #72a53b;
+  background-color: #2494be;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels\.scss}line{font-family:\0000356}}
@@ -6650,7 +6650,7 @@ a.thumbnail.active {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_progress-bars\.scss}line{font-family:\0000373}}
 .progress-bar-success {
-  background-color: #8CC152;
+  background-color: #3BAFDA;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/webapp\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar\.scss}line{font-family:\000037}}
 .progress-striped .progress-bar-success {
@@ -8656,13 +8656,23 @@ body {
   text-rendering: optimizelegibility;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003119}}
+.form-control {
+  border-width: 2px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003122}}
+.help-block {
+  margin: 5px 0;
+}
+
 /* customize navbar */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003127}}
 .navbar-default {
   border-color: #8CC152;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003123}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003130}}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -8676,29 +8686,29 @@ body {
 }
 
 /* ========== override sb-admin2 ========== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003136}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003143}}
 .sidebar {
   margin-top: 1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003146}}
 .sidebar ul li {
   border-bottom: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003149}}
 .sidebar ul li a {
   white-space: nowrap;
   color: gray;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003153}}
 .sidebar ul li.active > a {
   color: black;
   background-color: #eeeeee;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003157}}
 #sidebar-wrapper-wrapper {
   height: auto !important;
   margin: 0 auto -60px;
@@ -8707,46 +8717,46 @@ body {
 }
 
 /* ========== override fontawesome ========== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003165}}
 .fa-fw {
   margin-right: 0.2em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003168}}
 #side-menu .fa-fw {
   margin-right: 0.7em;
 }
 
 /* ========== custom styles ========== */
 /* sidebar menu and content defs */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003174}}
 #page-wrapper.sidebar-collapse {
   margin-left: 50px;
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003178}}
 #page-wrapper.sidebar-fullsize {
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003181}}
 #sidebar-wrapper.sidebar-fullsize {
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003186}}
 #sidebar-wrapper.sidebar.sidebar-collapse {
   width: 50px;
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003183}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003190}}
 #sidebar-wrapper.sidebar-collapse span {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003193}}
 #sidebar-wrapper #sidebar-footer {
   font-size: 12px;
   width: 250px;
@@ -8756,18 +8766,18 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003201}}
   #sidebar-wrapper #sidebar-footer {
     display: none;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003205}}
 #sidebar-wrapper.sidebar-collapse #sidebar-footer {
   width: 50px;
   transition: all 0.3s ease-out 0s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003209}}
 #sidebar-collapse-toggle {
   width: 50px;
   float: right;
@@ -8777,7 +8787,7 @@ body {
 }
 
 /* page header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/todoken\/Projects\/majimena\/majimena-test\/src\/main\/scss\/main\.scss}line{font-family:\00003218}}
 .page-header .description {
   font-size: 12px;
   margin: 0;
