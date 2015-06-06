@@ -1,46 +1,29 @@
-
-<div>
-    <h2><span translate="majimenatestApp.project.detail.title">Project</span> {{project.id}}</h2>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th translate="entity.detail.field">Field</th>
-                    <th translate="entity.detail.value">Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <span translate="majimenatestApp.project.name">Name</span>
-                    </td>
-                    <td>
-                        <input type="text" class="input-sm form-control" value="{{project.name}}" readonly>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span translate="majimenatestApp.project.description">Description</span>
-                    </td>
-                    <td>
-                        <input type="text" class="input-sm form-control" value="{{project.description}}" readonly>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span translate="majimenatestApp.project.owner">Owner</span>
-                    </td>
-                    <td>
-                        <input type="text" class="input-sm form-control" value="{{project.owner}}" readonly>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="row">
+    <div class="col-lg-12 page-title">
+        <h3>{{project.name}}</h3>
+        <p class="description">{{project.description}}</p>
     </div>
-
-    <button type="submit"
-            ui-sref="project"
-            class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
-    </button>
 </div>
+
+<div class="table-responsive">
+    <h4>プロジェクトメンバー</h4>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td><span translate="majimenatestApp.project.name">Name</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span translate="majimenatestApp.project.description">Description</span></td>
+                <td>{{project.description}}</td>
+            </tr>
+            <tr>
+                <td><span translate="majimenatestApp.project.owner">Owner</span></td>
+                <td>{{project.owner}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button type="submit" ui-sref="project" class="btn btn-info">
+    <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+</button>

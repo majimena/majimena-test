@@ -11,7 +11,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'metrics.title'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/admin/metrics/metrics.html',
                         controller: 'MetricsController'
                     }

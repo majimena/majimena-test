@@ -80,8 +80,11 @@ angular.module('majimenatestApp', ['LocalStorageModule', 'tmh.dynamicLocale',
     })
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider, httpRequestInterceptorCacheBusterProvider) {
 
-        //Cache everything except rest api requests
+        // cache everything except rest api requests
         httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
+
+        // use html5 mode
+        $locationProvider.html5Mode(false);
 
         $urlRouterProvider.otherwise('/');
         $stateProvider.state('site', {
@@ -103,6 +106,19 @@ angular.module('majimenatestApp', ['LocalStorageModule', 'tmh.dynamicLocale',
                     $translatePartialLoader.addPart('language');
                     return $translate.refresh();
                 }]
+            }
+        }).state('main', {
+            'abstract': true,
+            parent: 'site',
+            views: {
+                'sidebar@site': {
+                    templateUrl: 'scripts/components/navbar/sidebar/sidebar.html',
+                    controller: 'SidebarController'
+                },
+                'content@': {
+                    templateUrl: 'scripts/components/navbar/sidebar/content/content.html',
+                    controller: 'SidebarContentController'
+                }
             }
         });
 

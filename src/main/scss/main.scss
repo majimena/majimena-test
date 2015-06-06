@@ -6,6 +6,13 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+// customize bootstrap style defs
+$state-success-border: $state-success-text;
+$state-info-border: $state-info-text;
+$state-warning-border: $state-warning-text;
+$state-danger-border: $state-danger-text;
+
+// jhipster style defs
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
 }
@@ -116,6 +123,12 @@ body {
     text-rendering: optimizelegibility;
 }
 
+.table > thead > tr > th, .table > thead > tr > td,
+.table > tbody > tr > th, .table > tbody > tr > td,
+.table > tfoot > tr > th, .table > tfoot > tr > td {
+    vertical-align: middle;
+}
+
 .form-control {
     border-width: 2px;
 }
@@ -176,6 +189,7 @@ body {
     transition: $transition-all;
 }
 #page-wrapper.sidebar-fullsize {
+    margin-left: 250px;
     transition: $transition-all;
 }
 #sidebar-wrapper.sidebar-fullsize {
@@ -215,7 +229,11 @@ body {
 }
 
 /* page header */
-.page-header .description {
+.page-title {
+    @extend .page-header;
+    margin: 20px 0;
+}
+.page-title .description {
     font-size: $font-size-small;
     margin: 0;
 }

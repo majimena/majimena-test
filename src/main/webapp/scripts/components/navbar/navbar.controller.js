@@ -5,6 +5,8 @@ angular.module('majimenatestApp')
         $scope.isAuthenticated = Principal.isAuthenticated;
         $scope.$state = $state;
 
+        $scope.showSideMenu = !!$state.current.data.requireSideMenu;
+
         $scope.logout = function () {
             Auth.logout();
             $state.go('home');

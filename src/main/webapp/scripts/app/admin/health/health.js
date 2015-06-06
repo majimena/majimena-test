@@ -11,7 +11,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'health.title'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/admin/health/health.html',
                         controller: 'HealthController'
                     }

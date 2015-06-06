@@ -11,7 +11,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'majimenatestApp.project.home.title'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/entities/project/projects.html',
                         controller: 'ProjectController'
                     }
@@ -31,7 +31,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'majimenatestApp.project.detail.title'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/entities/project/project-detail.html',
                         controller: 'ProjectDetailController'
                     }
@@ -51,7 +51,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'majimenatestApp.project.form.title'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/entities/project/project-form.html',
                         controller: 'ProjectFormController'
                     }

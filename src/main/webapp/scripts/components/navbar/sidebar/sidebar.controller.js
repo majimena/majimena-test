@@ -1,23 +1,25 @@
 'use strict';
 
 angular.module('majimenatestApp')
-    .directive('sidebar',['$location',function() {
-        return {
-            templateUrl:'scripts/components/sidebar/sidebar.html',
-            restrict: 'E',
-            replace: true,
-            scope: {
-            },
-            controller:function($scope) {
-                $scope.minimum = false;
+    .controller('SidebarController', function ($scope, $cookieStore, $location, $state, Auth, Principal) {
+//                $scope.minimum = false;
+        $scope.loadSideMenu = function() {
+        	var toggle = $cookieStore.get('minify');
+        	$scope.toggleSideMenu(toggle);
+        	$scope.minimum = toggle;
+        };
                 $scope.selectedMenu = 'dashboard';
                 $scope.collapseVar = 0;
                 $scope.multiCollapseVar = 0;
 
-                $scope.toggleSideMenu = function() {
+                $scope.toggleSideMenu = function(toggle) {
+                	console.log(toggle);
                     // FIXME このへんはローカルストレージに設定を保存したほうが良さそう
-                    $scope.minimum = !$scope.minimum;
-                    if ($scope.minimum) {
+                    // var requestMinifySideMenu = !$cookieStore.get('minify');
+                    // $scope.minimum = requestMinifySideMenu;
+                    $cookieStore.put('minify', toggle);
+                    $scope.minimum = toggle;
+                    if (toggle) {
                         $('#page-wrapper').addClass('sidebar-collapse');
                         $('#side-menu li ul').removeClass('nav-second-level');
                     } else {
@@ -41,6 +43,4 @@ angular.module('majimenatestApp')
                         $scope.multiCollapseVar = y;
                     }
                 };
-            }
-        };
-    }]);
+    });

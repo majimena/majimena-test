@@ -1,4 +1,4 @@
-package org.majimena.test.service.util;
+package org.majimena.test.common.util;
 
 import org.apache.commons.lang.RandomStringUtils;
 

@@ -11,7 +11,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'audits.title'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/admin/audits/audits.html',
                         controller: 'AuditsController'
                     }

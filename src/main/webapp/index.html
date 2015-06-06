@@ -30,12 +30,9 @@
         <![endif]-->
         <!--<div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>-->
         <div id="wrapper">
-            <div id="navbar-wrapper" ui-view="navbar" ng-cloak="">
-            </div>
-            <div id="page-wrapper">
-                <div ui-view="content"></div>
-                <div class="footer"></div>
-            </div>
+            <div ui-view="navbar" ng-cloak=""></div>
+            <div ui-view="content" ng-cloak=""></div>
+            <div ui-view="footer" ng-cloak=""></div>
         </div>
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
@@ -154,6 +151,8 @@
         <script src="scripts/components/entities/project/project.service.js"></script>
         <!-- endbuild -->
 
-        <script src="scripts/components/sidebar/sidebar.directive.js"></script>
+        <script src="scripts/components/navbar/sidebar/sidebar.controller.js"></script>
+        <script src="scripts/components/navbar/sidebar/sidebar.directive.js"></script>
+        <script src="scripts/components/navbar/sidebar/content/content.controller.js"></script>
 </body>
 </html>

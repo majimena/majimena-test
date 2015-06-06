@@ -11,7 +11,7 @@ angular.module('majimenatestApp')
                     pageTitle: 'global.menu.admin.apidocs'
                 },
                 views: {
-                    'content@': {
+                    'content@main': {
                         templateUrl: 'scripts/app/admin/docs/docs.html'
                     }
                 }

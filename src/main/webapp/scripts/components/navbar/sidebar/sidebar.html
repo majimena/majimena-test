@@ -1,4 +1,4 @@
-<div id="sidebar-wrapper" class="sidebar" role="navigation" ng-class="{'sidebar-collapse': minimum === true, 'sidebar-fullsize': minimum === false}">
+<div id="sidebar-wrapper" class="sidebar" role="navigation" ng-class="{'sidebar-collapse': minimum === true, 'sidebar-fullsize': minimum === false}" ng-init="loadSideMenu()">
     <div class="sidebar-nav navbar-collapse">
         <ul id="side-menu" class="nav in">
             <li ui-sref-active="active">
@@ -64,7 +64,7 @@
         </ul>
     </div>
     <div id="sidebar-footer" class="clearfix">
-        <a id="sidebar-collapse-toggle" ng-click="toggleSideMenu()">
+        <a id="sidebar-collapse-toggle" ng-click="toggleSideMenu(!minimum)">
             <div ng-show="minimum === true"><i class="fa fa-ellipsis-h"></i></div>
             <div ng-show="minimum !== true"><i class="fa fa-angle-double-left"></i></div>
         </a>

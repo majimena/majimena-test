@@ -1,13 +1,12 @@
 package org.majimena.test.web.rest;
 
-import org.majimena.test.Application;
-import org.majimena.test.domain.Project;
-import org.majimena.test.repository.ProjectRepository;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static org.hamcrest.Matchers.hasItem;
+import org.majimena.test.Application;
+import org.majimena.test.domain.Project;
+import org.majimena.test.repository.ProjectRepository;
+import org.majimena.test.service.ProjectService;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -24,6 +23,7 @@ import javax.inject.Inject;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -49,7 +49,10 @@ public class ProjectResourceTest {
     @Inject
     private ProjectRepository projectRepository;
 
-    private MockMvc restProjectMockMvc;
+    @Inject
+    private ProjectService projectService;
+
+    private MockMvc mockMvc;
 
     private Project project;
 
@@ -58,7 +61,8 @@ public class ProjectResourceTest {
         MockitoAnnotations.initMocks(this);
         ProjectResource projectResource = new ProjectResource();
         ReflectionTestUtils.setField(projectResource, "projectRepository", projectRepository);
-        this.restProjectMockMvc = MockMvcBuilders.standaloneSetup(projectResource).build();
+        ReflectionTestUtils.setField(projectResource, "projectService", projectService);
+        this.mockMvc = MockMvcBuilders.standaloneSetup(projectResource).build();
     }
 
     @Before
@@ -75,10 +79,10 @@ public class ProjectResourceTest {
         int databaseSizeBeforeCreate = projectRepository.findAll().size();
 
         // Create the Project
-        restProjectMockMvc.perform(post("/api/projects")
-                .contentType(TestUtil.APPLICATION_JSON_UTF8)
-                .content(TestUtil.convertObjectToJsonBytes(project)))
-                .andExpect(status().isCreated());
+        mockMvc.perform(post("/api/projects")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(project)))
+            .andExpect(status().isCreated());
 
         // Validate the Project in the database
         List<Project> projects = projectRepository.findAll();
@@ -98,10 +102,10 @@ public class ProjectResourceTest {
         project.setName(null);
 
         // Create the Project, which fails.
-        restProjectMockMvc.perform(post("/api/projects")
-                .contentType(TestUtil.APPLICATION_JSON_UTF8)
-                .content(TestUtil.convertObjectToJsonBytes(project)))
-                .andExpect(status().isBadRequest());
+        mockMvc.perform(post("/api/projects")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(project)))
+            .andExpect(status().isBadRequest());
 
         // Validate the database is still empty
         List<Project> projects = projectRepository.findAll();
@@ -117,10 +121,10 @@ public class ProjectResourceTest {
         project.setDescription(null);
 
         // Create the Project, which fails.
-        restProjectMockMvc.perform(post("/api/projects")
-                .contentType(TestUtil.APPLICATION_JSON_UTF8)
-                .content(TestUtil.convertObjectToJsonBytes(project)))
-                .andExpect(status().isBadRequest());
+        mockMvc.perform(post("/api/projects")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(project)))
+            .andExpect(status().isBadRequest());
 
         // Validate the database is still empty
         List<Project> projects = projectRepository.findAll();
@@ -134,13 +138,13 @@ public class ProjectResourceTest {
         projectRepository.saveAndFlush(project);
 
         // Get all the projects
-        restProjectMockMvc.perform(get("/api/projects"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.[*].id").value(hasItem(project.getId().intValue())))
-                .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-                .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
-                .andExpect(jsonPath("$.[*].owner").value(hasItem(DEFAULT_OWNER.intValue())));
+        mockMvc.perform(get("/api/projects"))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+            .andExpect(jsonPath("$.[*].id").value(hasItem(project.getId().intValue())))
+            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
+            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
+            .andExpect(jsonPath("$.[*].owner").value(hasItem(DEFAULT_OWNER.intValue())));
     }
 
     @Test
@@ -150,7 +154,7 @@ public class ProjectResourceTest {
         projectRepository.saveAndFlush(project);
 
         // Get the project
-        restProjectMockMvc.perform(get("/api/projects/{id}", project.getId()))
+        mockMvc.perform(get("/api/projects/{id}", project.getId()))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(project.getId().intValue()))
@@ -163,8 +167,8 @@ public class ProjectResourceTest {
     @Transactional
     public void getNonExistingProject() throws Exception {
         // Get the project
-        restProjectMockMvc.perform(get("/api/projects/{id}", Long.MAX_VALUE))
-                .andExpect(status().isNotFound());
+        mockMvc.perform(get("/api/projects/{id}", Long.MAX_VALUE))
+            .andExpect(status().isNotFound());
     }
 
     @Test
@@ -173,16 +177,16 @@ public class ProjectResourceTest {
         // Initialize the database
         projectRepository.saveAndFlush(project);
 
-		int databaseSizeBeforeUpdate = projectRepository.findAll().size();
+        int databaseSizeBeforeUpdate = projectRepository.findAll().size();
 
         // Update the project
         project.setName(UPDATED_NAME);
         project.setDescription(UPDATED_DESCRIPTION);
         project.setOwner(UPDATED_OWNER);
-        restProjectMockMvc.perform(put("/api/projects")
-                .contentType(TestUtil.APPLICATION_JSON_UTF8)
-                .content(TestUtil.convertObjectToJsonBytes(project)))
-                .andExpect(status().isOk());
+        mockMvc.perform(put("/api/projects")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(project)))
+            .andExpect(status().isOk());
 
         // Validate the Project in the database
         List<Project> projects = projectRepository.findAll();
@@ -199,12 +203,12 @@ public class ProjectResourceTest {
         // Initialize the database
         projectRepository.saveAndFlush(project);
 
-		int databaseSizeBeforeDelete = projectRepository.findAll().size();
+        int databaseSizeBeforeDelete = projectRepository.findAll().size();
 
         // Get the project
-        restProjectMockMvc.perform(delete("/api/projects/{id}", project.getId())
-                .accept(TestUtil.APPLICATION_JSON_UTF8))
-                .andExpect(status().isOk());
+        mockMvc.perform(delete("/api/projects/{id}", project.getId())
+            .accept(TestUtil.APPLICATION_JSON_UTF8))
+            .andExpect(status().isOk());
 
         // Validate the database is empty
         List<Project> projects = projectRepository.findAll();

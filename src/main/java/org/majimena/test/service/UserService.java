@@ -1,13 +1,12 @@
 package org.majimena.test.service;
 
+import org.joda.time.DateTime;
+import org.majimena.test.common.util.RandomUtil;
 import org.majimena.test.domain.Authority;
 import org.majimena.test.domain.User;
 import org.majimena.test.repository.AuthorityRepository;
 import org.majimena.test.repository.UserRepository;
 import org.majimena.test.security.SecurityUtils;
-import org.majimena.test.service.util.RandomUtil;
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;

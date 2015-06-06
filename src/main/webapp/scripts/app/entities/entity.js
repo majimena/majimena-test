@@ -5,6 +5,6 @@ angular.module('majimenatestApp')
         $stateProvider
             .state('entity', {
                 abstract: true,
-                parent: 'site'
+                parent: 'main'
             });
     });

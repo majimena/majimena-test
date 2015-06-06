@@ -1,0 +1,20 @@
+{
+    "health": {
+        "title": "ヘルスチェック",
+        "refresh.button": "リロード",
+        "stacktrace": "スタックトレース",
+        "indicator": {
+            "diskSpace": "ディスクスペース",
+            "mail": "メール",
+            "db": "データベース"
+        },
+        "table": {
+            "service": "サービス名",
+            "status": "ステータス"
+        },
+        "status": {
+            "UP": "UP",
+            "DOWN": "DOWN"
+        }
+    }
+}
