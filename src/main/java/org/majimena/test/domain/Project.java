@@ -38,7 +38,8 @@ public class Project implements Serializable {
     @Column(name = "description", length = 255, nullable = false)
     private String description;
 
-    @Column(name = "owner")
-    private Long owner;
+    @ManyToOne
+    @JoinColumn(name = "owner", nullable = false)
+    private User owner;
 
 }

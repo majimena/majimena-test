@@ -70,7 +70,6 @@ public class ProjectResourceTest {
         project = new Project();
         project.setName(DEFAULT_NAME);
         project.setDescription(DEFAULT_DESCRIPTION);
-        project.setOwner(DEFAULT_OWNER);
     }
 
     @Test
@@ -182,7 +181,6 @@ public class ProjectResourceTest {
         // Update the project
         project.setName(UPDATED_NAME);
         project.setDescription(UPDATED_DESCRIPTION);
-        project.setOwner(UPDATED_OWNER);
         mockMvc.perform(put("/api/projects")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
             .content(TestUtil.convertObjectToJsonBytes(project)))

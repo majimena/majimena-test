@@ -18,4 +18,6 @@ public interface ProjectService {
 
     Optional<Project> saveProject(Project project);
 
+    Optional<Project> updateProject(Project project);
+
 }

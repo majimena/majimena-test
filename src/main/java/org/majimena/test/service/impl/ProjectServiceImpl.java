@@ -23,20 +23,15 @@ import java.util.Optional;
 public class ProjectServiceImpl implements ProjectService {
 
     @Inject
-    private ProjectRepository projectRepository;
+    protected ProjectRepository projectRepository;
 
     @Inject
-    private UserRepository userRepository;
+    protected UserRepository userRepository;
 
     @Override
     public Optional<Project> findProjectById(Long projectId) {
-        Project one = projectRepository.findOne(projectId);
-        Optional<Project> project = Optional.ofNullable(one);
-//        project.ifPresent(project1 -> {
-//            User user = userRepository.findOne(project1.getOwner());
-//            project1.setOwner(user);
-//        });
-        return project;
+        Optional<Project> one = Optional.ofNullable(projectRepository.findOne(projectId));
+        return one;
     }
 
     @Override
@@ -46,14 +41,24 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Optional<Project> saveProject(Project project) {
-        // ログインユーザーIDを取得
         String login = SecurityUtils.getCurrentLogin();
         Optional<User> owner = userRepository.findOneByLogin(login);
-        project.setOwner(owner.get().getId());
+        owner.ifPresent(u -> {
+            project.setOwner(u);
+            projectRepository.save(project);
+        });
+        return Optional.of(project);
+    }
 
-        // プロジェクトを保存
-        Project save = projectRepository.save(project);
-        return Optional.of(save);
+    @Override
+    public Optional<Project> updateProject(Project project) {
+        Optional<Project> one = findProjectById(project.getId());
+        one.ifPresent(p -> {
+            p.setName(project.getName());
+            p.setDescription(project.getDescription());
+            projectRepository.save(p);
+        });
+        return one;
     }
 
 }
