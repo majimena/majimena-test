@@ -5,6 +5,7 @@ import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import liquibase.integration.spring.SpringLiquibase;
+import net.sf.log4jdbc.sql.jdbcapi.DataSourceSpy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,10 +46,9 @@ public class DatabaseConfiguration implements EnvironmentAware {
         this.propertyResolver = new RelaxedPropertyResolver(env, "spring.datasource.");
     }
 
-    @Bean(destroyMethod = "shutdown")
     @ConditionalOnMissingClass(name = "org.majimena.test.config.HerokuDatabaseConfiguration")
     @Profile("!" + Constants.SPRING_PROFILE_CLOUD)
-    public DataSource dataSource() {
+    public DataSource internalDataSource() {
         log.debug("Configuring Datasource");
         if (propertyResolver.getProperty("url") == null && propertyResolver.getProperty("databaseName") == null) {
             log.error("Your database connection pool configuration is incorrect! The application" +
@@ -79,6 +79,12 @@ public class DatabaseConfiguration implements EnvironmentAware {
             config.setMetricRegistry(metricRegistry);
         }
         return new HikariDataSource(config);
+    }
+
+//    @Bean(destroyMethod = "shutdown")
+    @Bean
+    public DataSource dataSource() {
+        return new DataSourceSpy(internalDataSource());
     }
 
     @Bean

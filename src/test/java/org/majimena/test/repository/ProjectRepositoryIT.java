@@ -22,7 +22,7 @@ public class ProjectRepositoryIT {
 
     @WebAppConfiguration
     @SpringApplicationConfiguration(classes = Application.class)
-    public static class SampleTest extends AbstractDBUnitTest {
+    public static class SampleTest extends AbstractSpringDBUnitTest {
 
         @Inject
         private ProjectRepository sut;

@@ -15,5 +15,5 @@ import org.springframework.test.context.support.DirtiesContextTestExecutionListe
     DependencyInjectionTestExecutionListener.class,
     DirtiesContextTestExecutionListener.class,
     TransactionDbUnitTestExecutionListener.class})
-public abstract class AbstractDBUnitTest {
+public abstract class AbstractSpringDBUnitTest {
 }
