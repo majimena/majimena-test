@@ -1,30 +1,32 @@
 package org.majimena.test.web.rest;
 
+import mockit.Mocked;
+import mockit.NonStrictExpectations;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 import org.majimena.test.Application;
 import org.majimena.test.domain.Project;
-import org.majimena.test.repository.ProjectRepository;
+import org.majimena.test.domain.project.ProjectCriteria;
 import org.majimena.test.service.ProjectService;
-import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.IntegrationTest;
+import org.majimena.test.web.rest.util.PaginationUtil;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
@@ -32,10 +34,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *
  * @see ProjectResource
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
-@WebAppConfiguration
-@IntegrationTest
+@RunWith(Enclosed.class)
 public class ProjectResourceTest {
 
     private static final String DEFAULT_NAME = "SAMPLE_TEXT";
@@ -46,170 +45,218 @@ public class ProjectResourceTest {
     private static final Long DEFAULT_OWNER = 0L;
     private static final Long UPDATED_OWNER = 1L;
 
-    @Inject
-    private ProjectRepository projectRepository;
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @SpringApplicationConfiguration(classes = Application.class)
+    @WebAppConfiguration
+    public static class PostTest {
 
-    @Inject
-    private ProjectService projectService;
+        private MockMvc mockMvc;
 
-    private MockMvc mockMvc;
+        @Inject
+        private ProjectResource sut;
 
-    private Project project;
+        @Mocked
+        private ProjectService projectService;
 
-    @PostConstruct
-    public void setup() {
-        MockitoAnnotations.initMocks(this);
-        ProjectResource projectResource = new ProjectResource();
-        ReflectionTestUtils.setField(projectResource, "projectRepository", projectRepository);
-        ReflectionTestUtils.setField(projectResource, "projectService", projectService);
-        this.mockMvc = MockMvcBuilders.standaloneSetup(projectResource).build();
+        @Before
+        public void setup() {
+            mockMvc = MockMvcBuilders.standaloneSetup(sut).build();
+            sut.setProjectService(projectService);
+        }
+
+        @Test
+        public void createProject() throws Exception {
+            final Project testData = Project.builder().name(DEFAULT_NAME).description(DEFAULT_DESCRIPTION).build();
+            new NonStrictExpectations() {{
+                projectService.saveProject(testData);
+                result = Optional.of(testData.builder().id(1L).build());
+            }};
+
+            mockMvc.perform(post("/api/projects")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(testData)))
+                .andDo(print())
+                .andExpect(status().isCreated());
+        }
+
+        @Test
+        public void checkNameIsRequired() throws Exception {
+            final Project testData = Project.builder().description(DEFAULT_DESCRIPTION).build();
+
+            mockMvc.perform(post("/api/projects")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(testData)))
+                .andDo(print())
+                .andExpect(status().isBadRequest());
+        }
+
+        @Test
+        public void checkDescriptionIsRequired() throws Exception {
+            final Project testData = Project.builder().name(DEFAULT_NAME).build();
+
+            mockMvc.perform(post("/api/projects")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(testData)))
+                .andDo(print())
+                .andExpect(status().isBadRequest());
+        }
     }
 
-    @Before
-    public void initTest() {
-        project = new Project();
-        project.setName(DEFAULT_NAME);
-        project.setDescription(DEFAULT_DESCRIPTION);
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @SpringApplicationConfiguration(classes = Application.class)
+    @WebAppConfiguration
+    public static class GetListTest {
+
+        private MockMvc mockMvc;
+
+        @Inject
+        private ProjectResource sut;
+
+        @Mocked
+        private ProjectService projectService;
+
+        @Before
+        public void setup() {
+            mockMvc = MockMvcBuilders.standaloneSetup(sut).build();
+            sut.setProjectService(projectService);
+        }
+
+        @Test
+        public void getAllProjects() throws Exception {
+            final Project testData1 = Project.builder().id(1L).name(DEFAULT_NAME).description(DEFAULT_DESCRIPTION).build();
+            final Project testData2 = Project.builder().id(2L).name(DEFAULT_NAME).description(DEFAULT_DESCRIPTION).build();
+            final Pageable pageable = PaginationUtil.generatePageRequest(1, 1);
+            new NonStrictExpectations() {{
+                projectService.getProjects(new ProjectCriteria(), pageable);
+                result = new PageImpl(Arrays.asList(testData1, testData2), pageable, 2);
+            }};
+
+            mockMvc.perform(get("/api/projects")
+                .param("page", "1")
+                .param("per_page", "1"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON + ";charset=UTF-8"));
+//                .andExpect(jsonPath("$.[*].id").value(hasItem(1)))
+//                .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
+//                .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)));
+        }
     }
 
-    @Test
-    @Transactional
-    public void createProject() throws Exception {
-        int databaseSizeBeforeCreate = projectRepository.findAll().size();
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @SpringApplicationConfiguration(classes = Application.class)
+    @WebAppConfiguration
+    public static class GetTest {
 
-        // Create the Project
-        mockMvc.perform(post("/api/projects")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(project)))
-            .andExpect(status().isCreated());
+        private MockMvc mockMvc;
 
-        // Validate the Project in the database
-        List<Project> projects = projectRepository.findAll();
-        assertThat(projects).hasSize(databaseSizeBeforeCreate + 1);
-        Project testProject = projects.get(projects.size() - 1);
-        assertThat(testProject.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testProject.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
-        assertThat(testProject.getOwner()).isEqualTo(DEFAULT_OWNER);
+        @Inject
+        private ProjectResource sut;
+
+        @Mocked
+        private ProjectService projectService;
+
+        @Before
+        public void setup() {
+            mockMvc = MockMvcBuilders.standaloneSetup(sut).build();
+            sut.setProjectService(projectService);
+        }
+
+        @Test
+        public void getProject() throws Exception {
+            new NonStrictExpectations() {{
+                projectService.getProjectById(1L);
+                result = Optional.of(Project.builder().id(1L).name(DEFAULT_NAME).description(DEFAULT_DESCRIPTION).build());
+            }};
+
+            mockMvc.perform(get("/api/projects/{id}", 1L))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON + ";charset=UTF-8"))
+                .andExpect(jsonPath("$.id", is(1)))
+                .andExpect(jsonPath("$.name", is(DEFAULT_NAME)))
+                .andExpect(jsonPath("$.description", is(DEFAULT_DESCRIPTION)));
+        }
+
+        @Test
+        public void getNonExistingProject() throws Exception {
+            new NonStrictExpectations() {{
+                projectService.getProjectById(Long.MAX_VALUE);
+                result = Optional.empty();
+            }};
+
+            mockMvc.perform(get("/api/projects/{id}", Long.MAX_VALUE))
+                .andDo(print())
+                .andExpect(status().isNotFound());
+        }
     }
 
-    @Test
-    @Transactional
-    public void checkNameIsRequired() throws Exception {
-        // Validate the database is empty
-        assertThat(projectRepository.findAll()).hasSize(0);
-        // set the field null
-        project.setName(null);
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @SpringApplicationConfiguration(classes = Application.class)
+    @WebAppConfiguration
+    public static class PutTest {
 
-        // Create the Project, which fails.
-        mockMvc.perform(post("/api/projects")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(project)))
-            .andExpect(status().isBadRequest());
+        private MockMvc mockMvc;
 
-        // Validate the database is still empty
-        List<Project> projects = projectRepository.findAll();
-        assertThat(projects).hasSize(0);
+        @Inject
+        private ProjectResource sut;
+
+        @Mocked
+        private ProjectService projectService;
+
+        @Before
+        public void setup() {
+            mockMvc = MockMvcBuilders.standaloneSetup(sut).build();
+            sut.setProjectService(projectService);
+        }
+
+        @Test
+        public void updateProject() throws Exception {
+            final Project testData = Project.builder().id(1L).name(DEFAULT_NAME).description(DEFAULT_DESCRIPTION).build();
+            new NonStrictExpectations() {{
+                projectService.updateProject(testData);
+                result = Optional.of(testData);
+            }};
+
+            mockMvc.perform(put("/api/projects")
+                .contentType(TestUtil.APPLICATION_JSON_UTF8)
+                .content(TestUtil.convertObjectToJsonBytes(testData)))
+                .andDo(print())
+                .andExpect(status().isOk());
+        }
     }
 
-    @Test
-    @Transactional
-    public void checkDescriptionIsRequired() throws Exception {
-        // Validate the database is empty
-        assertThat(projectRepository.findAll()).hasSize(0);
-        // set the field null
-        project.setDescription(null);
+    @RunWith(SpringJUnit4ClassRunner.class)
+    @SpringApplicationConfiguration(classes = Application.class)
+    @WebAppConfiguration
+    public static class DeleteTest {
 
-        // Create the Project, which fails.
-        mockMvc.perform(post("/api/projects")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(project)))
-            .andExpect(status().isBadRequest());
+        private MockMvc mockMvc;
 
-        // Validate the database is still empty
-        List<Project> projects = projectRepository.findAll();
-        assertThat(projects).hasSize(0);
-    }
+        @Inject
+        private ProjectResource sut;
 
-    @Test
-    @Transactional
-    public void getAllProjects() throws Exception {
-        // Initialize the database
-        projectRepository.saveAndFlush(project);
+        @Mocked
+        private ProjectService projectService;
 
-        // Get all the projects
-        mockMvc.perform(get("/api/projects"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.[*].id").value(hasItem(project.getId().intValue())))
-            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
-            .andExpect(jsonPath("$.[*].owner").value(hasItem(DEFAULT_OWNER.intValue())));
-    }
+        @Before
+        public void setup() {
+            mockMvc = MockMvcBuilders.standaloneSetup(sut).build();
+            sut.setProjectService(projectService);
+        }
 
-    @Test
-    @Transactional
-    public void getProject() throws Exception {
-        // Initialize the database
-        projectRepository.saveAndFlush(project);
+        @Test
+        public void deleteProject() throws Exception {
+            final Project testData = Project.builder().id(1L).name(DEFAULT_NAME).description(DEFAULT_DESCRIPTION).build();
+            new NonStrictExpectations() {{
+                projectService.updateProject(testData);
+                result = Optional.of(testData);
+            }};
 
-        // Get the project
-        mockMvc.perform(get("/api/projects/{id}", project.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.id").value(project.getId().intValue()))
-            .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
-            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
-            .andExpect(jsonPath("$.owner").value(DEFAULT_OWNER.intValue()));
-    }
-
-    @Test
-    @Transactional
-    public void getNonExistingProject() throws Exception {
-        // Get the project
-        mockMvc.perform(get("/api/projects/{id}", Long.MAX_VALUE))
-            .andExpect(status().isNotFound());
-    }
-
-    @Test
-    @Transactional
-    public void updateProject() throws Exception {
-        // Initialize the database
-        projectRepository.saveAndFlush(project);
-
-        int databaseSizeBeforeUpdate = projectRepository.findAll().size();
-
-        // Update the project
-        project.setName(UPDATED_NAME);
-        project.setDescription(UPDATED_DESCRIPTION);
-        mockMvc.perform(put("/api/projects")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(project)))
-            .andExpect(status().isOk());
-
-        // Validate the Project in the database
-        List<Project> projects = projectRepository.findAll();
-        assertThat(projects).hasSize(databaseSizeBeforeUpdate);
-        Project testProject = projects.get(projects.size() - 1);
-        assertThat(testProject.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testProject.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testProject.getOwner()).isEqualTo(UPDATED_OWNER);
-    }
-
-    @Test
-    @Transactional
-    public void deleteProject() throws Exception {
-        // Initialize the database
-        projectRepository.saveAndFlush(project);
-
-        int databaseSizeBeforeDelete = projectRepository.findAll().size();
-
-        // Get the project
-        mockMvc.perform(delete("/api/projects/{id}", project.getId())
-            .accept(TestUtil.APPLICATION_JSON_UTF8))
-            .andExpect(status().isOk());
-
-        // Validate the database is empty
-        List<Project> projects = projectRepository.findAll();
-        assertThat(projects).hasSize(databaseSizeBeforeDelete - 1);
+            mockMvc.perform(delete("/api/projects/{id}", 1L)
+                .accept(TestUtil.APPLICATION_JSON_UTF8))
+                .andDo(print())
+                .andExpect(status().isOk());
+        }
     }
 }

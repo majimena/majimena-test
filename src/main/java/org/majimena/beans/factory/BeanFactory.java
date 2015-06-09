@@ -42,6 +42,9 @@ public class BeanFactory implements InitializingBean {
     }
 
     public static <F, T> T create(F original, Class<T> clazz) {
+        if (original == null) {
+            return null;
+        }
         if (!conversionService.canConvert(original.getClass(), clazz)) {
             throw new IllegalArgumentException("Cannot convert object. Conversion source class ["
                 + original.getClass().getName() + "] destination class [" + clazz.getName() + "]");
@@ -51,11 +54,17 @@ public class BeanFactory implements InitializingBean {
     }
 
     public static <F, T> T create(F original, BeanConverter<F, T> converter) {
+        if (original == null) {
+            return null;
+        }
         T converted = converter.convert(original);
         return converted;
     }
 
     public static <F, T> T create(F original, T destination) {
+        if (original == null) {
+            return null;
+        }
         BeanUtils.copyProperties(original, destination);
         return destination;
     }

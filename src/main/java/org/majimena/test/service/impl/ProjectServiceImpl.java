@@ -29,13 +29,13 @@ public class ProjectServiceImpl implements ProjectService {
     protected UserRepository userRepository;
 
     @Override
-    public Optional<Project> findProjectById(Long projectId) {
+    public Optional<Project> getProjectById(Long projectId) {
         Optional<Project> one = Optional.ofNullable(projectRepository.findOne(projectId));
         return one;
     }
 
     @Override
-    public Page<Project> findProjects(ProjectCriteria criteria, Pageable pageable) {
+    public Page<Project> getProjects(ProjectCriteria criteria, Pageable pageable) {
         return projectRepository.findAll(pageable);
     }
 
@@ -52,7 +52,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Optional<Project> updateProject(Project project) {
-        Optional<Project> one = findProjectById(project.getId());
+        Optional<Project> one = getProjectById(project.getId());
         one.ifPresent(p -> {
             p.setName(project.getName());
             p.setDescription(project.getDescription());
@@ -61,4 +61,8 @@ public class ProjectServiceImpl implements ProjectService {
         return one;
     }
 
+    @Override
+    public void deleteProject(Long projectId) {
+        projectRepository.delete(projectId);
+    }
 }

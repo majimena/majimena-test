@@ -12,12 +12,14 @@ import java.util.Optional;
  */
 public interface ProjectService {
 
-    Optional<Project> findProjectById(Long projectId);
+    Optional<Project> getProjectById(Long projectId);
 
-    Page<Project> findProjects(ProjectCriteria criteria, Pageable pageable);
+    Page<Project> getProjects(ProjectCriteria criteria, Pageable pageable);
 
     Optional<Project> saveProject(Project project);
 
     Optional<Project> updateProject(Project project);
+
+    void deleteProject(Long projectId);
 
 }
