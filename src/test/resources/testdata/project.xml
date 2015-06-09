@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <PROJECT id="0" name="Name 1" description="Description 1" owner="1"/>
+    <PROJECT id="1" name="Name 2" description="Description 2" owner="2"/>
+</dataset>
